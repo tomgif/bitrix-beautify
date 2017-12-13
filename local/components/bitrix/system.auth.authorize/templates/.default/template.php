@@ -94,5 +94,5 @@ if ($arResult['AUTH_SERVICES']) {
 		'AUTH_LINE' => $arResult['FOR_INTRANET'] ? 'N' : 'Y',
 	], $component, [
 		'HIDE_ICONS' => 'Y'
-	);
+	]);
 }

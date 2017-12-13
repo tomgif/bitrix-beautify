@@ -22,52 +22,47 @@ ShowMessage($arParams['~AUTH_RESULT']);
 	</div>
 	<div class="auth-form__row">
 		<div class="auth-form__label">
-			<span class="starrequired">*</span>
-			<?=GetMessage('AUTH_LOGIN')?>
+			<?=GetMessage('AUTH_LOGIN')?>*
 		</div>
 		<div class="auth-form__control">
-			<input class="auth-form__input" type="text" name="USER_LOGIN" value="<?=$arResult['LAST_LOGIN']?>">
+			<input type="text" name="USER_LOGIN" value="<?=$arResult['LAST_LOGIN']?>">
 		</div>
 	</div>
 	<div class="auth-form__row">
 		<div class="auth-form__label">
-			<span class="starrequired">*</span>
-			<?=GetMessage('AUTH_CHECKWORD')?>
+			<?=GetMessage('AUTH_CHECKWORD')?>*
 		</div>
 		<div class="auth-form__control">
-			<input class="auth-form__input" type="text" name="USER_CHECKWORD" value="<?=$arResult['USER_CHECKWORD']?>">
+			<input type="text" name="USER_CHECKWORD" value="<?=$arResult['USER_CHECKWORD']?>">
 		</div>
 	</div>
 	<div class="auth-form__row">
 		<div class="auth-form__label">
-			<span class="starrequired">*</span>
-			<?=GetMessage('AUTH_NEW_PASSWORD_REQ')?>
+			<?=GetMessage('AUTH_NEW_PASSWORD_REQ')?>*
 		</div>
 		<div class="auth-form__control">
-			<input class="auth-form__input" type="password" name="USER_PASSWORD" value="<?=$arResult['USER_PASSWORD']?>">
+			<input type="password" name="USER_PASSWORD" value="<?=$arResult['USER_PASSWORD']?>">
 		</div>
 	</div>
 	<div class="auth-form__row">
 		<div class="auth-form__label">
-			<span class="starrequired">*</span>
-			<?=GetMessage('AUTH_NEW_PASSWORD_CONFIRM')?>
+			<?=GetMessage('AUTH_NEW_PASSWORD_CONFIRM')?>*
 		</div>
 		<div class="auth-form__control">
-			<input class="auth-form__input" type="password" name="USER_CONFIRM_PASSWORD" value="<?=$arResult['USER_CONFIRM_PASSWORD']?>">
+			<input type="password" name="USER_CONFIRM_PASSWORD" value="<?=$arResult['USER_CONFIRM_PASSWORD']?>">
 		</div>
 	</div><?
 
 	if ($arResult['USE_CAPTCHA']) {
 		?><div class="auth-form__row">
 			<div class="auth-form__label">
-				<input class="auth-form__input" type="hidden" name="captcha_sid" value="<?=$arResult['CAPTCHA_CODE']?>">
+				<input type="hidden" name="captcha_sid" value="<?=$arResult['CAPTCHA_CODE']?>">
 				<img src="/bitrix/tools/captcha.php?captcha_sid=<?=$arResult['CAPTCHA_CODE']?>" alt="CAPTCHA">
 			</div>
 		</div>
 		<div class="auth-form__row">
 			<div class="auth-form__label">
-				<span class="starrequired">*</span>
-				<?=GetMessage('system_auth_captcha')?>
+				<?=GetMessage('system_auth_captcha')?>*
 			</div>
 			<div class="auth-form__control">
 				<input type="text" name="captcha_word" value="">
@@ -82,7 +77,7 @@ ShowMessage($arParams['~AUTH_RESULT']);
 
 <p><?=$arResult['GROUP_POLICY']['PASSWORD_REQUIREMENTS'];?></p>
 
-<p><span class="starrequired">*</span><?=GetMessage('AUTH_REQ')?></p>
+<p>* <?=GetMessage('AUTH_REQ')?></p>
 
 <p><a href="<?=$arResult['AUTH_AUTH_URL']?>">
 	<strong><?=GetMessage('AUTH_AUTH')?></strong>
